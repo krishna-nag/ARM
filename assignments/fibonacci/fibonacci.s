@@ -1,10 +1,10 @@
 	THUMB    
 	AREA     appcode, CODE, READONLY
-    EXPORT __main
+	EXPORT __main
 	ENTRY 
 __main  FUNCTION	; Program to find ith element in fibonacci series	 		
-         MOV  r0, #0x2; the value of i (so here we want to find 3rd element)
-         MOV  r1, #0x0 ; The first element in fibonacci series
+		 MOV  r0, #0x2; the value of i (so here we want to find 3rd element)
+		 MOV  r1, #0x0 ; The first element in fibonacci series
 		 MOV  r2, #0x1 ; The second element in fibonacci series
          
 		 CMP r0,#2
@@ -14,7 +14,7 @@ __main  FUNCTION	; Program to find ith element in fibonacci series
 		 BLT stop ; if it was lesser then we already have the output, so stop
 		 BEQ stop ; if it was equal , then we already have the output, so stop
 		 
-loop     ADD r4,r1,r2
+loop	 ADD r4,r1,r2
 		 MOV r1,r2
 		 MOV r2,r4
 		 SUBS r0,r0,#1
