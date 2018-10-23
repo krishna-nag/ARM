@@ -1,3 +1,5 @@
+	;Krishna Nagaraja
+	; IMT2015512
 	THUMB    
 	AREA     appcode, CODE, READONLY
 	EXPORT __main
@@ -14,3 +16,9 @@ loop	CMP r0,r1
 stop 	B stop
 		ENDFUNC
 		END
+
+; Testing
+; input r0=0x6,r1=0x1, output r3=0x1
+; input r0=0x6,r1=0x12, output r3=0x6
+; input r0=0x2,r1=0x1, output r3=0x1
+; input r0=0x2,r1=0x3, output r3=0x1
