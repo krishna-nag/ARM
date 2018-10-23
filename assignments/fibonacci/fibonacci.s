@@ -1,8 +1,8 @@
-THUMB    
+	THUMB    
 	AREA     appcode, CODE, READONLY
     EXPORT __main
 	ENTRY 
-__main  FUNCTION	; Program to find i'th element in fibonacci series	 		
+__main  FUNCTION	; Program to find ith element in fibonacci series	 		
          MOV  r0, #0x2; the value of i (so here we want to find 3rd element)
          MOV  r1, #0x0 ; The first element in fibonacci series
 		 MOV  r2, #0x1 ; The second element in fibonacci series
