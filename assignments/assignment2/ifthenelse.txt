@@ -1,0 +1,37 @@
+The IT instruction stands for "If-then". This is a thumb instruction used for specifying conditions in the ARM assembly language. This instruction can be used to execute upto four consecutive instructions. 
+
+Syntax: IT{x{y{z}}} cond 
+where, cond specifies condition for first instruction in the IT block, x for second statement and so on.
+
+It is necessary that that the statements following this IT statement should all have conditions in them too, just as ARM
+instructions do. This is because IT is only a thumb instruction and not an ARM one. So, IT is optional. Thus, for the 
+program to work logically correct, both with and without assemblers which support thumb, we have to use conditional codes for 
+the subsequent statements. This way, even without the IT command, the program should work excactly as it is expected to. 
+One more restriction is that for each 'T' in the IT command, the condition of the instruction should match the 'cond' given
+initially, and for each E, the condition should be exactly opposite to 'cond'. Eg: greater-than is opposite to less than,
+equal to is opposite of not equal to, and so on.
+Eg:
+correct:
+
+ITTEE eq
+MOVeq ..
+MOVeq ..
+MOVne ..
+MOVne..
+
+not correct:
+ITTEE eq
+MOVeq..
+MOVne.. ; This is a statement corresponding to T and yet it has opposite condition.
+
+So, basically, IT block provides an option to ensure that the following statements match its structure criteria. This is 
+actually only used by the assemblers to enforce the order and condition of statement in the IT block. It is removed before 
+assembling.
+
+With this bacground about the IT construct, we can understand why the CODE 1 gave errors and why the CODE2 compiled 
+successfully. CODE 1, has the ITTTE instruction after which four statements for the IT block. They should all be given 
+conditional codes. But, there is no conditional code given for either of them. So, the error.
+CODE2 on the other hand has the ITTTE instruction, and the four subsequent instructions that form the IT block, 
+also have conditional codes, and three consecutive ones have the same conditional code as LT (which is the 'cond' here), 
+and the the last one ( which corresponds to else) has GT (opposite to LT). Thus, all conditions and restrictions are 
+satisfied with the CODE2 so it compiles successfully.
