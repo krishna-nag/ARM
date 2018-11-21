@@ -14,7 +14,7 @@ Of the three of them, the 64 bit representation is most closest to the actual va
 
 Let us take the example of half precision floating point(16 bits) to understand the normal and subnormal numbers. The format is first bit is sign bit, next 5 bits are for exponent and the rest 10 bits are for the fractional part. Implicitly there is a leading 1 assumed for the fractional part. So, now the least exponent is 2^-14 (because all zeros in exponent are not allowed). So, for numbers below 1 * 2^-14, we cannot represent them. So to increase the range, what is done is, when all zero exponent is present, then a leading one is not assumed. So, there can e as many leading zeros as wanted, and hence we can represent much more lower numbers. But, this will be at a cost of precision, because most of the fractional part will now be zeros. 
 
-![alt text](https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fi.stack.imgur.com%2Frai7z.png&imgrefurl=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F40297786%2Fdisplay-newline-on-webpage&docid=hOVut4HbjQPniM&tbnid=gHx14Tt1XOGTCM%3A&vet=10ahUKEwjDleq8_a7eAhXGdisKHZk1DgIQMwhAKAEwAQ..i&w=661&h=376&bih=790&biw=1440&q=new%20line%20in%20md&ved=0ahUKEwjDleq8_a7eAhXGdisKHZk1DgIQMwhAKAEwAQ&iact=mrc&uact=8)
+![alt text](https://github.com/krishna-nag/ARM/blob/master/assignments/assignment3/numberline.png)
 
 
 
