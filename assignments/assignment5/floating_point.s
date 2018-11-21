@@ -99,7 +99,7 @@ set_nor VLDR.F32 s9,=0.5
 	VLDR.F32 s11, =-0.7
 	VLDR.F32 s12, =0.1
 	BX lr
-; process function takes 	
+; process function performs the operation(decided by the weights and bias) on all inputs, and prints the output	
 process VMUL.F32 S25, S13, S9	;dot product=(input[0]*w0+input[1]*w1+input[2]*w2) ;input1
 		VFMA.F32 S25, S14, S10
 		VFMA.F32 S25, S15, S11
