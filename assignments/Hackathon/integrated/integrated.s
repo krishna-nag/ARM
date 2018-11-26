@@ -24,7 +24,8 @@
 	
 
 __main    FUNCTION
-	  LDR R11,=0x20000000 ; Input address
+	  LDR R2,=0x20000000 ; Input address
+	  MOV R11,R2
 	  LDR R8,=0x20000060 ; 
 	  MOV R2,R11
 	  MOV R12,#10;
@@ -162,7 +163,7 @@ DECODE CMP R1,R4     ; Decodes the encoded bits encoded using hamming (12,8)
 	  MUL R7,R4,R3
 	  LDR R10,[R8,R7]
 
-	LDR R9,=0XF80;1111 0000 0000
+	LDR R9,=0XF80;1111 1000 0000
 	AND R5,R10,R9;
 	MOV R2,#0;
 	MOV R6,#0;

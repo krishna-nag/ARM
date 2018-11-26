@@ -7,7 +7,7 @@
 __main function
 	;R2 stores the Origin
 	;R1 has the address of the stack where the coordinate list starts
-	LDR R2,=0x22223000;ASSUMING R2 STORES (X,Y) AS FIRST HALF WORD IS X AND NEXT HALF IS Y
+	LDR R2,=0x00220030;ASSUMING R2 STORES (X,Y) AS FIRST HALF WORD IS X AND NEXT HALF IS Y
 	LDR R4,=0xFFFF0000; Throughout the code, the format of (x,y) is first halfword is x and second halfword is y
 	AND R5,R2,R4;r5 HAS X:(X,0)
 	SUB R6,R2,R5;R6 HAS Y:(0,Y)
