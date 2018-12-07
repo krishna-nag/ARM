@@ -112,7 +112,7 @@ z = x+y #This works even if x and y are of different types
 # Input and Output
 - The Input would be a .py file, which would contain the python code you would want to compile
 ```bash
-python start.py > assembly_file_name.s
+python compiler.py > assembly_file_name.s
 Enter file name :<enter your file name here>
 ```
 - Then the output would appear in the assembly_file_name.s file which you can directly use in keil to assemble it.
