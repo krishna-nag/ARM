@@ -94,9 +94,9 @@ if 3 in [1, 2, 3]:
   - evaluate: If there is an expression (binary operation,boolean operation, comparison), then that expression is given to the evaluate function to recursively evaluate it and generate the assembly code.
 - This style of compilation is inspired from LISP programming language.
 - Memory usage: So, this compiler uses 32Kb of program memory, 4kb of temporary memory, and all registers and float single precision registers
-  -0x20000000 to 0x20007FFF is program memory where variables are allocated
-  -0xE0000000 to 0xE0000FFF is 4kb temporary memory, used for internal operations. These memory locations are allocated and freed from time to time.
-  -Similarly all registers are allocated and freed from time to time
+  - 0x20000000 to 0x20007FFF is program memory where variables are allocated
+  - 0xE0000000 to 0xE0000FFF is 4kb temporary memory, used for internal operations. These memory locations are allocated and freed from time to time.
+  - Similarly all registers are allocated and freed from time to time
 
 ## Int and float compatibility
 - This compiler is able to achieve compatibility between these types
